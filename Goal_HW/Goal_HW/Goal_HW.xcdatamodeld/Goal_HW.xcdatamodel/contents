@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Completed" representedClassName="Completed" syncable="YES" codeGenerationType="class">
+        <attribute name="goal" attributeType="String"/>
+    </entity>
+    <entity name="Progress" representedClassName="Progress" syncable="YES" codeGenerationType="class">
+        <attribute name="goal" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Progress" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Completed" positionX="-358.716552734375" positionY="-33.28359985351562" width="128" height="44"/>
+    </elements>
+</model>

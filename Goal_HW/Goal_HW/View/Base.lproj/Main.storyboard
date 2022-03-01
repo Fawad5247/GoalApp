@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dsi-fH-pZB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Goal_HW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEI-2V-P67">
+                                <rect key="frame" x="82" y="187" width="250" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="work_in_progress"/>
+                                <connections>
+                                    <action selector="progressBotton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bdf-Pd-9Tt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Red-Rl-o0L">
+                                <rect key="frame" x="82" y="531" width="250" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="completed"/>
+                                <connections>
+                                    <action selector="completedBotton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lG6-NZ-b71"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ban-hS-bpv"/>
+                    <connections>
+                        <segue destination="YJY-dT-cY6" kind="show" id="Jw7-e2-OhY"/>
+                        <segue destination="vXc-Jr-Ibb" kind="show" id="Vjw-ua-n2B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="70.982142857142847"/>
+        </scene>
+        <!--Completed-->
+        <scene sceneID="tJw-15-SUp">
+            <objects>
+                <viewController storyboardIdentifier="CompletedViewController" id="vXc-Jr-Ibb" customClass="CompletedViewController" customModule="Goal_HW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3t-8p-EfI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kWv-RW-y8Y">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="completedCell" id="JOg-Gc-nPc" customClass="completedCell" customModule="Goal_HW" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JOg-Gc-nPc" id="wKd-qp-stn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CompleteLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPu-ZV-CIG">
+                                                    <rect key="frame" x="38" y="11" width="338" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="completeLabel" destination="BPu-ZV-CIG" id="sFB-xR-w0O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXc-Jr-Ibb" id="UAQ-n5-hy0"/>
+                                    <outlet property="delegate" destination="vXc-Jr-Ibb" id="pap-aC-fti"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kti-2C-M1L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kWv-RW-y8Y" firstAttribute="top" secondItem="Kti-2C-M1L" secondAttribute="top" id="2hG-XS-c60"/>
+                            <constraint firstItem="Kti-2C-M1L" firstAttribute="bottom" secondItem="kWv-RW-y8Y" secondAttribute="bottom" id="XQk-km-nLh"/>
+                            <constraint firstItem="kWv-RW-y8Y" firstAttribute="leading" secondItem="Kti-2C-M1L" secondAttribute="leading" id="e2y-Sf-c0w"/>
+                            <constraint firstItem="Kti-2C-M1L" firstAttribute="trailing" secondItem="kWv-RW-y8Y" secondAttribute="trailing" id="m4B-ty-DDF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Completed" id="fTe-XS-wvP"/>
+                    <connections>
+                        <outlet property="tableview" destination="kWv-RW-y8Y" id="M17-tX-iqw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0T-oV-8Cn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934.7826086956522" y="497.54464285714283"/>
+        </scene>
+        <!--InProgress-->
+        <scene sceneID="8Qd-dv-nBi">
+            <objects>
+                <viewController storyboardIdentifier="ProgressViewController" id="YJY-dT-cY6" customClass="ProgressViewController" customModule="Goal_HW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9yq-Fv-BcW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c2U-OU-oL4">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="progressCell" id="6f9-9w-gE6" customClass="progressCell" customModule="Goal_HW" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6f9-9w-gE6" id="CBS-jr-Whr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="progressLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1z-3f-6KL">
+                                                    <rect key="frame" x="48" y="11" width="346" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="progressLabel" destination="d1z-3f-6KL" id="XDg-Ec-smO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YJY-dT-cY6" id="6Ed-Lu-lXS"/>
+                                    <outlet property="delegate" destination="YJY-dT-cY6" id="giU-Kd-P0x"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N7J-Tf-yQU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N7J-Tf-yQU" firstAttribute="bottom" secondItem="c2U-OU-oL4" secondAttribute="bottom" id="7LM-G8-wVl"/>
+                            <constraint firstItem="c2U-OU-oL4" firstAttribute="top" secondItem="N7J-Tf-yQU" secondAttribute="top" id="XNK-YG-Miu"/>
+                            <constraint firstItem="c2U-OU-oL4" firstAttribute="leading" secondItem="N7J-Tf-yQU" secondAttribute="leading" id="pOq-ac-zU7"/>
+                            <constraint firstItem="N7J-Tf-yQU" firstAttribute="trailing" secondItem="c2U-OU-oL4" secondAttribute="trailing" id="wkM-Co-I97"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="InProgress" id="3b4-FW-hNj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="kZM-b9-rx5">
+                            <connections>
+                                <action selector="plusBotton:" destination="YJY-dT-cY6" id="4A5-Zx-GdL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="c2U-OU-oL4" id="Wrd-Xl-4JO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCh-zk-NwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934.7826086956522" y="-209.59821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="48N-fF-ei1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dsi-fH-pZB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xJf-ot-wXI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HJh-Bs-IVZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvg-zy-dVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="completed" width="1024" height="841"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="work_in_progress" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
